@@ -1,0 +1,23 @@
+var settings = {};
+settings.sqs = {};
+settings.redis = {};
+
+// General
+settings.workers = 2;
+settings.nodeId = 'x'; // Unique per-node
+settings.logFile = 'out.log';
+settings.logConsole = false;
+
+// Input: Amazon SQS
+settings.sqs.region = '';
+settings.sqs.accessKeyId = '';
+settings.sqs.secretAccessKey = '';
+settings.sqs.sqsUrl = '';
+settings.sqs.delDelay = '1500';
+settings.sqs.batchSize = 10;
+
+// Output: Redis
+settings.redis.host = '127.0.0.1';
+settings.redis.port = '6379';
+
+module.exports = settings;

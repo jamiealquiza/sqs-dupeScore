@@ -1,0 +1,15 @@
+{
+  "name": "sqs-dupescore",
+  "version": "0.1.0",
+  "description": "SQS exploration tool.",
+  "main": "dupeScore.js",
+  "dependencies": {
+    "aws-sdk": "2.0.x",
+    "redis": "0.10.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jamie Alquiza",
+  "license": "MIT"
+}
