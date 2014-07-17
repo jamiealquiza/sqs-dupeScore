@@ -2,6 +2,9 @@ sqs-dupeScore
 ==============
 
 # Overview
+
+Blog post: http://grey-boundary.com/dupescore-exploring-duplicate-message-delivery-from-amazon-sqs/
+
 A tool that is used to explore duplicate message events from Amazon SQS, a distributed message queue that favors availability and at least once delivery. dupeScore is designed to operate pools of queue workers across many servers, long-polling from a single SQS queue. 
 
 Message bodies are SHA1 hashed and populated into a sorted set stored in Redis, scored by the number of times each unique event is handled by any worker. Additionally, each hash has a corresponding list that's populated with crude k-ordered IDs (epoch-nodeId-workerId) generated at the message request time, to track when the event was polled and from what node/worker.
